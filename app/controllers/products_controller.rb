@@ -3,9 +3,6 @@ class ProductsController < ApplicationController
     end
     
     def create
-        @product = Product.new(params[:product])
-       
-        @product.save
-        redirect_to @product
+        render plain: params[:product].inspect
     end
 end
